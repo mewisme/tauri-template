@@ -7,9 +7,12 @@
   ],
   "permissions": [
     "core:default",
+    "core:window:allow-center",
     "opener:default",
     "process:default",
     "fs:default",
-    "http:default"
+    "http:default",
+    "store:default",
+    "os:default"
   ]
 }

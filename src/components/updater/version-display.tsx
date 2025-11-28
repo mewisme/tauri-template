@@ -83,6 +83,16 @@ export function VersionDisplay({ className }: { className?: string }) {
     }
   }, [showUpdateDialog]);
 
+  // Listen for update check command
+  useEffect(() => {
+    const handleShowUpdateDialog = () => {
+      setShowUpdateDialog(true);
+    };
+
+    window.addEventListener("show-update-dialog", handleShowUpdateDialog);
+    return () => window.removeEventListener("show-update-dialog", handleShowUpdateDialog);
+  }, []);
+
   const handleUpdate = async () => {
     try {
       setIsUpdating(true);
