@@ -12,11 +12,11 @@ export default function Empty() {
           </div>
           <div className="space-y-2">
             <h2 className="text-xl font-semibold tracking-tight">
-              Create Your First Diagram
+              Start Building Your App
             </h2>
             <p className="text-sm text-muted-foreground">
-              Start by creating a new UML diagram. You can choose from various
-              diagram types like sequence, class, activity, and more.
+              Start by creating a new page. You can choose from various
+              page types like home, about, contact, and more.
             </p>
           </div>
           <Link to="/">
