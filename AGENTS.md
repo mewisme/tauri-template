@@ -4,7 +4,7 @@ AGENTS.md — Repo agent guidance
 This is a template for building cross-platform desktop applications using Tauri, React, and TypeScript. The template comes pre-configured with essential tools, UI components, and backend commands for file system and Git operations.
 
 ## Tech Stack
-- **Frontend**: React 18 + TypeScript + Vite
+- **Frontend**: React 19 + TypeScript + Vite 6
 - **UI Framework**: shadcn/ui (pre-configured)
 - **Styling**: Tailwind CSS v4
 - **State Management**: Jotai
@@ -14,6 +14,7 @@ This is a template for building cross-platform desktop applications using Tauri,
 
 ## Code Structure
 ```
+scripts/                # App tooling (version bump, changelog, rename)
 src/                    # Frontend React application
 ├── components/         # Reusable UI components (shadcn/ui)
 ├── features/           # Feature-specific components
@@ -21,7 +22,7 @@ src/                    # Frontend React application
 ├── stores/             # Jotai state management stores
 ├── hooks/              # Custom React hooks
 ├── lib/                # Utility functions and helpers
-├── App.tsx             # Main application component
+├── app.tsx             # Main application component
 └── main.tsx            # Application entry point
 
 src-tauri/              # Tauri backend (Rust)
@@ -59,6 +60,10 @@ src-tauri/              # Tauri backend (Rust)
 - Preview build: `pnpm preview`.
 - Tauri app dev: `pnpm app-dev`.
 - Tauri app build: `pnpm app-build`.
+- Generate app icons: `pnpm icon` (uses `./app-icon.png`).
+- Bump version and changelog: `pnpm app-upver`.
+- Generate Tauri updater signing keys: `pnpm app-sign`.
+- Rename app: `pnpm rename`.
 
 ## Tests & lint
 - This repo has no test runner or linter configured by default.
@@ -76,11 +81,8 @@ src-tauri/              # Tauri backend (Rust)
 - Side effects: keep components pure where possible; push side effects to hooks or stores (`stores/`).
 
 ## UI Components
-This template uses shadcn/ui with Tailwind CSS. Pre-configured components include:
-- Context Menu, Dialog, Dropdown Menu
-- Popover, Progress, Switch
-- Toast, Tooltip
-- Command (cmdk)
+This template uses shadcn/ui with Tailwind CSS. Pre-configured components include (among others):
+- Accordion, Alert, Alert Dialog, Avatar, Badge, Breadcrumb, Button, Button Group, Calendar, Card, Carousel, Chart, Checkbox, Collapsible, Command (cmdk), Context Menu, Dialog, Drawer, Dropdown Menu, Field, Hover Card, Input, Input OTP, Kbd, Label, Menubar, Navigation Menu, Pagination, Popover, Progress, Radio Group, Resizable, Scroll Area, Select, Separator, Sheet, Sidebar, Skeleton, Slider, Sonner (toast), Spinner, Switch, Table, Tabs, Textarea, Tooltip, Toggle
 
 When adding new shadcn/ui components, use: `pnpm dlx shadcn@latest add [component-name]`
 
