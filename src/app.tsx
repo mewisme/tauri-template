@@ -1,12 +1,12 @@
-// import './App.css';
+// import './app.css';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'next-themes';
 import { Toaster } from "@/components/ui/sonner"
-import Home from './pages/Home';
-import { Layout } from './components/Layout';
-import Empty from './pages/Empty';
-import { Titlebar } from './features/Titlebar';
+import Home from './pages/home';
+import { Layout } from './components/layout';
+import Empty from './pages/empty';
+import { Titlebar } from './features/titlebar';
 
 
 function App() {
