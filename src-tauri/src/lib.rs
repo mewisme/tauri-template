@@ -97,6 +97,7 @@ pub fn run() {
             toggle_devtools,
             open_devtools,
             close_devtools,
+            commands::splash::splash_close,
             commands::files::list_dir,
             commands::files::read_file_content,
             commands::files::write_file_content,

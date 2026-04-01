@@ -14,13 +14,24 @@
     "macOSPrivateApi": true,
     "windows": [
       {
+        "label": "main",
         "title": "Tauri template",
         "width": 800,
         "height": 700,
         "devtools": true,
         "decorations": false,
         "transparent": true,
-        "shadow": true
+        "shadow": true,
+        "visible": false
+      },
+      {
+        "label": "splashscreen",
+        "url": "splashscreen.html",
+        "width": 300,
+        "height": 300,
+        "decorations": false,
+        "resizable": false,
+        "center": true
       }
     ],
     "security": {

@@ -1,5 +1,6 @@
 import { Github, ExternalLink } from 'lucide-react';
 import { openUrl } from '@tauri-apps/plugin-opener';
+import { VersionDisplay } from '@/features/updater/version-display';
 
 export function Footer() {
   const openLink = async (url: string) => {
@@ -17,6 +18,10 @@ export function Footer() {
         <Github size={14} />
         <span>GitHub</span>
       </a>
+
+      <span className="text-muted-foreground/50">•</span>
+
+      <VersionDisplay />
 
       <span className="text-muted-foreground/50">•</span>
 
