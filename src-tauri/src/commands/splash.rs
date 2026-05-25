@@ -7,11 +7,13 @@ pub fn splash_close(app: AppHandle, show_main: Option<bool>) {
     let show_main = show_main.unwrap_or(true);
 
     if let Some(splash) = app.get_webview_window("splashscreen") {
+        println!("Closing splash window");
         let _ = splash.close();
     }
 
     if let Some(main) = app.get_webview_window("main") {
         if show_main {
+            println!("Showing main window");
             let _ = main.show();
             let _ = main.set_focus();
         }

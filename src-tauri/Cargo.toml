@@ -1,7 +1,7 @@
 [package]
-name = "tauri-template"
+name = "template"
 version = "0.0.1"
-description = "Tauri template"
+description = "template"
 authors = ["mewisme"]
 edition = "2021"
 

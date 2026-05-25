@@ -1,5 +1,3 @@
-// import './app.css';
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'next-themes';
 import { invoke } from '@tauri-apps/api/core';
@@ -21,6 +19,7 @@ function App() {
         return;
       }
       setBootReady(true);
+      console.log("Splash closed");
       await invoke("splash_close");
     })().catch((error) => {
       console.error(error);

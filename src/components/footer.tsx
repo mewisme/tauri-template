@@ -1,6 +1,7 @@
-import { Github, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { openUrl } from '@tauri-apps/plugin-opener';
 import { VersionDisplay } from '@/features/updater/version-display';
+import { Github } from './icons/github';
 
 export function Footer() {
   const openLink = async (url: string) => {
@@ -15,7 +16,7 @@ export function Footer() {
         rel="noopener noreferrer"
         className="flex items-center gap-1.5 hover:text-foreground transition-colors"
       >
-        <Github size={14} />
+        <Github className="size-4" />
         <span>GitHub</span>
       </a>
 
