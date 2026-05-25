@@ -9,7 +9,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="fixed bottom-0 left-0 right-0 h-8 flex items-center justify-center gap-4 bg-background backdrop-blur-sm border-t border-muted-foreground/30 text-xs text-muted-foreground z-[9998]">
+    <footer className="fixed bottom-0 left-0 right-0 h-8 flex items-center justify-center gap-4 bg-background backdrop-blur-sm border-t border-muted-foreground/30 text-xs text-muted-foreground z-9998">
       <a
         href="https://github.com/mewisme/tauri-template"
         target="_blank"

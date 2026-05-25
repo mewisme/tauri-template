@@ -19,7 +19,6 @@ function App() {
         return;
       }
       setBootReady(true);
-      console.log("Splash closed");
       await invoke("splash_close");
     })().catch((error) => {
       console.error(error);
